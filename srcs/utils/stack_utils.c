@@ -65,8 +65,6 @@ static void	numbers_n_str(char *s, int index, t_list *list)
 	remove_extra_spaces(cpy);
 	while (ft_strchr(cpy, ' '))
 	{
-		if (cpy[0] == ' ' && ft_strlen(cpy) == 1)
-			return ;
 		add_node_to_bottom(ft_atoi(cpy), index, list);
 		ft_memcpy(cpy, ft_strchr(cpy, ' ') + 1, ft_strlen(ft_strchr(cpy, ' ')));
 	}
