@@ -81,6 +81,8 @@ void	fill_stack(int	argc, char **argv, t_list *list)
 	{
 		while (argv[i])
 		{
+			if (is_only_space(argv[i]))
+				abort();
 			numbers_n_str(argv[i], 0, list);
 			i++;
 		}

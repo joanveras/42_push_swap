@@ -6,6 +6,18 @@ void	abort(void)
 	exit(EXIT_FAILURE);
 }
 
+t_bool	is_only_space(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\t')
+		i++;
+	if (!s[i])
+		return (TRUE);
+	return (FALSE);
+}
+
 t_bool	duplicate(t_list *a)
 {
 	t_node	*current_1;

@@ -6,7 +6,7 @@ int	main(int argc, char **argv)
 	t_list	*a;
 	t_list	*b;
 
-	if (argc == 1 || !argv[1][0])
+	if (argc == 1)
 		return (1);
 	if (invalid_arg(argv))
 		abort();

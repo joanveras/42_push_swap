@@ -65,6 +65,7 @@ int		list_size(t_list *list);
 char	*remove_extra_spaces(char *s);
 
 t_bool	duplicate(t_list *a);
+t_bool	is_only_space(char *s);
 t_bool	invalid_arg(char **argv);
 t_bool	is_ascending(t_list *list);
 t_bool	is_descending(t_list *list);
