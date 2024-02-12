@@ -23,6 +23,8 @@ int	main(int argc, char **argv)
 		sort_4_5(a, b, size);
 	else if (size > 5)
 		radix_sort(a, b);
+	ft_printf("\n");
+	print_list(a);
 	free_list(a);
 	free_list(b);
 	return (0);

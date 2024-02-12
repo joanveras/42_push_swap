@@ -13,7 +13,7 @@ t_bool	is_only_space(char *s)
 	i = 0;
 	while (s[i] == ' ' || s[i] == '\t')
 		i++;
-	if (!s[i])
+	if (!s[i] && i != 0)
 		return (TRUE);
 	return (FALSE);
 }
@@ -47,15 +47,14 @@ t_bool	invalid_arg(char **argv)
 	while (argv[i])
 	{
 		j = 0;
-		while (argv[i][j] == ' ' || argv[i][j] == '\t')
-			j++;
-		if (!argv[i][j])
-			return (TRUE);
 		while (argv[i][j])
 		{
-			if (ft_isdigit(argv[i][j])
+			if ((argv[i][j] == '-' && ft_isdigit(argv[i][j + 1]))
+				|| (((argv[i][j - 1] != ' ' || argv[i][j - 1] != '\t')
+					&& argv[i][j - 1])
 				|| argv[i][j] == ' '
-				|| argv[i][j] == '\t')
+				|| argv[i][j] == '\t'
+				|| ft_isdigit(argv[i][j])))
 				j++;
 			else
 				return (TRUE);
@@ -70,6 +69,8 @@ char	*remove_extra_spaces(char *s)
 	int		i;
 	int		j;
 	
+	if (!s[0])
+		return (NULL);
 	j = 0;
 	i = 0;
 	while (s[i])
@@ -80,10 +81,7 @@ char	*remove_extra_spaces(char *s)
 		{
 			s[j] = s[i];
 			if (s[i + 1] == ' ' || s[i + 1] == '\t')
-			{
-				j++;
-				s[j] = ' ';
-			}
+				s[++j] = ' ';
 			j++;
 			i++;
 		}
