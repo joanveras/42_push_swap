@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:40:18 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 12:49:40 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/06 17:19:45 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	*remove_extra_spaces(char *s)
 {
 	int		i;
 	int		j;
-	
+
 	if (!s[0])
 		return (NULL);
 	j = 0;

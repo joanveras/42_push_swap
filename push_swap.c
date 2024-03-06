@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:33:48 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 17:10:11 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/06 17:28:45 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ int	main(int argc, char **argv)
 	t_list	*a;
 	t_list	*b;
 
-	if (argc == 1)
-		return (1);
+	no_arguments(argc);
 	if (invalid_arg_1(argv))
 		abort();
 	if (invalid_arg_2(argv))

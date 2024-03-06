@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:41:34 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 12:30:34 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/06 17:19:17 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void	add_node_to_bottom(int cont, int indx, t_list *list)
 
 void	print_list(t_list *list)
 {
-	t_node *current;
+	t_node	*current;
 
 	current = list->head;
 	while (current)
@@ -89,7 +89,7 @@ static void	numbers_n_str(char *s, int index, t_list *list)
 	free(cpy);
 }
 
-void	fill_stack(int	argc, char **argv, t_list *list)
+void	fill_stack(int argc, char **argv, t_list *list)
 {
 	int	i;
 

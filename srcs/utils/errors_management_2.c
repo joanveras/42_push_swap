@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:31:49 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 16:28:15 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/06 17:24:10 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,10 @@ t_bool	invalid_arg_2(char **argv)
 		i++;
 	}
 	return (FALSE);
+}
+
+void	no_arguments(int argc)
+{
+	if (argc == 1)
+		exit(EXIT_FAILURE);
 }

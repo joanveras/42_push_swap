@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:37:25 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 08:37:29 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/06 17:18:21 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	push_list(t_list *a, t_list *b)
 
 void	rotate_list(t_list *list)
 {
-	int 	tmp_cont;
+	int		tmp_cont;
 	int		tmp_indx;
 	t_node	*current;
 	t_node	*after_current;
@@ -70,15 +70,15 @@ void	rotate_list(t_list *list)
 void	rrotate_list(t_list *list)
 {
 	t_node	*last_node;
-    t_node	*second_last_node;
+	t_node	*second_last_node;
 
 	last_node = list->head;
-    while (last_node->next)
+	while (last_node->next)
 	{
-        second_last_node = last_node;
-        last_node = last_node->next;
-    }
-    second_last_node->next = NULL;
-    last_node->next = list->head;
-    list->head = last_node;
+		second_last_node = last_node;
+		last_node = last_node->next;
+	}
+	second_last_node->next = NULL;
+	last_node->next = list->head;
+	list->head = last_node;
 }

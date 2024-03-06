@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/06 17:13:56 by jveras            #+#    #+#             */
+/*   Updated: 2024/03/06 17:24:43 by jveras           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -5,20 +17,20 @@
 # include "libftprintf.h"
 # include "libft.h"
 
-typedef enum
+typedef enum e_bool
 {
 	FALSE,
 	TRUE
 }	t_bool;
 
-typedef struct	s_node
+typedef struct s_node
 {
 	int				index;
 	int				content;
 	struct s_node	*next;
 }					t_node;
 
-typedef struct	s_list
+typedef struct s_list
 {
 	t_node	*head;
 	t_node	*tail;
@@ -26,6 +38,7 @@ typedef struct	s_list
 
 // error handling
 void	abort(void);
+void	no_arguments(int argc);
 
 // operations
 void	sa(t_list *a);
@@ -55,7 +68,7 @@ void	index_stack(t_list *list);
 void	rotate_list(t_list *list);
 void	rrotate_list(t_list *list);
 void	push_list(t_list *a, t_list *b);
-void	fill_stack(int	argc, char **argv, t_list *list);
+void	fill_stack(int argc, char **argv, t_list *list);
 void	add_node_to_top(int cont, int indx, t_list *list);
 
 t_list	*initialize_list(void);
