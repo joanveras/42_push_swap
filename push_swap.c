@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:33:48 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 15:17:23 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/06 17:10:11 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	main(int argc, char **argv)
 		sort_4_5(a, b, size);
 	else if (size > 5)
 		radix_sort(a, b);
-	print_list(a);
 	free_list(a);
 	free_list(b);
 	return (0);
