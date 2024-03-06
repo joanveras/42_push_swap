@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   errors_management_1.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/06 08:40:18 by jveras            #+#    #+#             */
+/*   Updated: 2024/03/06 12:49:40 by jveras           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 void	abort(void)
@@ -38,7 +50,7 @@ t_bool	duplicate(t_list *a)
 	return (FALSE);
 }
 
-t_bool	invalid_arg(char **argv)
+t_bool	invalid_arg_1(char **argv)
 {
 	int	i;
 	int	j;
@@ -50,11 +62,8 @@ t_bool	invalid_arg(char **argv)
 		while (argv[i][j])
 		{
 			if ((argv[i][j] == '-' && ft_isdigit(argv[i][j + 1]))
-				|| (((argv[i][j - 1] != ' ' || argv[i][j - 1] != '\t')
-					&& argv[i][j - 1])
-				|| argv[i][j] == ' '
-				|| argv[i][j] == '\t'
-				|| ft_isdigit(argv[i][j])))
+				|| (argv[i][j] == ' ' || argv[i][j] == '\t')
+					|| ft_isdigit(argv[i][j]))
 				j++;
 			else
 				return (TRUE);

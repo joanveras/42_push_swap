@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/06 08:33:48 by jveras            #+#    #+#             */
+/*   Updated: 2024/03/06 15:17:23 by jveras           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
 int	main(int argc, char **argv)
@@ -8,7 +20,9 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		return (1);
-	if (invalid_arg(argv))
+	if (invalid_arg_1(argv))
+		abort();
+	if (invalid_arg_2(argv))
 		abort();
 	a = initialize_list();
 	b = initialize_list();
@@ -23,6 +37,7 @@ int	main(int argc, char **argv)
 		sort_4_5(a, b, size);
 	else if (size > 5)
 		radix_sort(a, b);
+	print_list(a);
 	free_list(a);
 	free_list(b);
 	return (0);
