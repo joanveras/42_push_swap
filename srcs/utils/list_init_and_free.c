@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:40:23 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 08:40:23 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/08 10:06:50 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,17 @@ void	free_list(t_list *list)
 		free(tmp);
 	}
 	free(list);
+}
+
+void	free_mat(char **mat)
+{
+	int		i;
+
+	i = 0;
+	while (mat[i])
+	{
+		free(mat[i]);
+		i++;
+	}
+	free(mat);
 }

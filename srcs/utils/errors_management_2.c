@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:31:49 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 17:24:10 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/08 10:34:28 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,28 @@ static t_bool	check_size(char *s)
 	return (FALSE);
 }
 
+static t_bool	check_in_str(char *s)
+{
+	int		i;
+	char	**mat;
+	char	**tmp;
+
+	mat = ft_split(remove_extra_spaces(s), ' ');
+	tmp = mat;
+	i = 0;
+	while (mat[i])
+	{
+		if (check_size(mat[i]))
+		{
+			free_mat(tmp);
+			return (TRUE);
+		}
+		i++;
+	}
+	free_mat(tmp);
+	return (FALSE);
+}
+
 t_bool	invalid_arg_2(char **argv)
 {
 	int	i;
@@ -58,8 +80,16 @@ t_bool	invalid_arg_2(char **argv)
 	i = 1;
 	while (argv[i])
 	{
-		if (check_size(argv[i]))
-			return (TRUE);
+		if (ft_strchr(argv[i], ' '))
+		{
+			if (check_in_str(argv[i]))
+				return (TRUE);
+		}
+		else
+		{
+			if (check_size(argv[i]))
+				return (TRUE);
+		}
 		i++;
 	}
 	return (FALSE);

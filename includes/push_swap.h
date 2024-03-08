@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:13:56 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/06 17:24:43 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/07 17:46:47 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	sort_2_3(t_list *a, t_list *b, int size);
 void	sort_4_5(t_list *a, t_list *b, int size);
 
 // list utils & operations utils...
+void	free_mat(char **mat);
 void	free_list(t_list *list);
 void	swap_list(t_list *list);
 void	print_list(t_list *list);
