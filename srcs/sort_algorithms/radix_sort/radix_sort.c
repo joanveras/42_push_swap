@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:38:52 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/07 13:54:06 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/11 08:50:55 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,14 @@ static int	get_max_bits(t_list *list)
 	return (max_bits);
 }
 
-void	radix_sort(t_list *a, t_list *b)
+static void	sort(t_list *a, t_list *b, int size, int max_bits)
 {
 	int		i;
 	int		j;
-	int		size;
-	int		max_bits;
 	t_node	*current;
 
-	if (is_ascending(a))
-		return ;
 	i = 0;
 	current = a->head;
-	size = list_size(a);
-	max_bits = get_max_bits(a);
 	while (i < max_bits)
 	{
 		j = 0;
@@ -61,4 +55,16 @@ void	radix_sort(t_list *a, t_list *b)
 			pa(a, b);
 		i++;
 	}
+}
+
+void	radix_sort(t_list *a, t_list *b)
+{
+	int		size;
+	int		max_bits;
+
+	if (is_ascending(a))
+		return ;
+	size = list_size(a);
+	max_bits = get_max_bits(a);
+	sort(a, b, size, max_bits);
 }
