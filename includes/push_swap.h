@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:13:56 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/07 17:46:47 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/11 14:21:54 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ void	rrr(t_list *a, t_list *b);
 void	radix_sort(t_list *a, t_list *b);
 void	sort_2_3(t_list *a, t_list *b, int size);
 void	sort_4_5(t_list *a, t_list *b, int size);
+
+// error handling
+void	has_duplicate(t_list *a, t_list *b);
 
 // list utils & operations utils...
 void	free_mat(char **mat);

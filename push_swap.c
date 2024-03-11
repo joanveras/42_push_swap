@@ -6,7 +6,7 @@
 /*   By: jveras <verasjoan587@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 08:33:48 by jveras            #+#    #+#             */
-/*   Updated: 2024/03/07 16:10:50 by jveras           ###   ########.fr       */
+/*   Updated: 2024/03/11 14:22:36 by jveras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ int	main(int argc, char **argv)
 	b = initialize_list();
 	fill_stack(argc, argv, a);
 	index_stack(a);
-	if (duplicate(a))
-		abort();
+	has_duplicate(a, b);
 	size = list_size(a);
 	if (size == 2 || size == 3)
 		sort_2_3(a, b, size);
